@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu</title>
+    <!-- google font link  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- css link -->
+    <link rel="stylesheet" href="./style/style.css" />
+
+    <!-- 
+    - favicon
+  -->
+    <link
+      rel="shortcut icon"
+      href="./assest/img/second-cup.png"
+      type="image/png"
+    />
+
+    <style>
+      body {
+        overflow-y: auto; /* Ensure vertical scrolling is enabled */
+      }
+
+      .button-container {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 20px;
+      }
+
+      .menu-button {
+        background-color: #f8cc80; /* Green background */
+        color: rgb(0, 0, 0); /* White text */
+        border: none; /* No border */
+        padding: 10px 20px; /* Some padding */
+        text-align: center; /* Centered text */
+        text-decoration: none; /* No underline */
+        display: inline-block; /* Inline block for button */
+        font-size: 16px; /* Font size */
+
+        cursor: pointer; /* Pointer cursor on hover */
+        transition: background-color 0.3s, transform 0.3s; /* Smooth background and transform change */
+        border: black;
+      }
+
+      .menu-button:hover {
+        background-color: black; /* Darker green on hover */
+        transform: scale(1.05); /* Slightly increase size on hover */
+        color: white;
+      }
+
+      .menu-button:focus {
+        outline: none; /* Remove default focus outline */
+      }
+
+      /* Media Queries for Responsiveness */
+      @media (max-width: 768px) {
+        .menu-button {
+          font-size: 14px; /* Smaller font size on smaller screens */
+          padding: 8px 16px; /* Adjust padding */
+        }
+      }
+
+      @media (max-width: 480px) {
+        .button-container {
+          flex-direction: column; /* Stack buttons vertically */
+          align-items: center; /* Center align buttons */
+          padding: 10px;
+          display: flex;
+          gap: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <%- include('nav') %>
+
+    <main>
+      <article>
+        <br />
+        <br />
+        <br />
+        <!-- 
+        - #MENU
+      -->
+
+        <section class="section menu" aria-label="menu-label" id="menu">
+          <div class="container">
+            <p class="section-subtitle text-center label-2">
+              Special Selection
+            </p>
+
+            <h2 class="headline-1 section-title text-center">Menu</h2>
+
+            <div class="button-container">
+              <li>
+                <button class="menu-button" id="coffee-items">
+                  Coffee Items
+                </button>
+              </li>
+              <li>
+                <button class="menu-button" id="non-coffee-items">
+                  Non-Coffee Items
+                </button>
+              </li>
+              <li><button class="menu-button" id="food-items">Food</button></li>
+            </div>
+
+            <br />
+            <br />
+            <h2 class="menu-items" id="menu-items-coffee">Coffee</h2>
+            <br />
+            <ul class="grid-list">
+              <li>
+                <div class="menu-card hover:card">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 100; --height: 100"
+                  >
+                    <img
+                      src="./assest/img/image copy 6.png"
+                      width="100"
+                      height="100"
+                      loading="lazy"
+                      alt="Opu Fish"
+                      class="img-cover"
+                    />
+                  </figure>
+
+                  <div>
+                    <div class="title-wrapper">
+                      <h3 class="title-3">
+                        <a class="card-title">Expresso/D.</a>
+                      </h3>
+
+                      <span class="span title-2">Rs. 100/120</span>
+                    </div>
+
+                    <p class="card-text label-1">
+                      rich and intense coffee brewed by forcing hot water
+                      through finely-ground coffee beans
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="menu-card hover:card">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 100; --height: 100"
+                  >
+                    <img
+                      src="./assest/img/image copy 9.png"
+                      width="100"
+                      height="100"
+                      loading="lazy"
+                      alt="Opu Fish"
+                      class="img-cover"
+                    />
+                  </figure>
+
+                  <div>
+                    <div class="title-wrapper">
+                      <h3 class="title-3">
+                        <a class="card-title">Americano/D.</a>
+                      </h3>
+
+                      <span class="span title-2">Rs. 110/130</span>
+                    </div>
+
+                    <p class="card-text label-1">
+                      smooth blend of rich espresso and hot water, creating a
+                      bold and flavorful coffee
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="menu-card hover:card">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 100; --height: 100"
+                  >
+                    <img
+                      src="./assest/img/image.png"
+                      width="100"
+                      height="100"
+                      loading="lazy"
+                      alt="Greek Salad"
+                      class="img-cover"
+                    />
+                  </figure>
+
+                  <div>
+                    <div class="title-wrapper">
+                      <h3 class="title-3">
+                        <a class="card-title">Cappuccino</a>
+                      </h3>
+
+                      <span class="span title-2">Rs. 160</span>
+                    </div>
+
+                    <p class="card-text label-1">
+                      coffee made with equal parts espresso, steamed milk, and
+                      velvety milk foam
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="menu-card hover:card">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 100; --height: 100"
+                  >
+                    <img
+                      src=" ./assest/img/image copy 4.png"
+                      width="100"
+                      height="100"
+                      loading="lazy"
+                      alt="Olivas Rellenas"
+                      class="img-cover"
+                    />
+                  </figure>
+
+                  <div>
+                    <div class="title-wrapper">
+                      <h3 class="title-3">
+                        <a class="card-title">Mocha</a>
+                      </h3>
+
+                      <span class="span title-2">Rs. 180</span>
+                    </div>
+
+                    <p class="card-text label-1">
+                      blend of rich espresso, steamed milk, and decadent
+                      chocolate syrup, topped with whipped cream and a drizzle
+                      of chocolate
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="menu-card hover:card">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 100; --height: 100"
+                  >
+                    <img
+                      src="./assest/img/image copy 5.png"
+                      width="100"
+                      height="100"
+                      loading="lazy"
+                      alt="Lasagne"
+                      class="img-cover"
+                    />
+                  </figure>
+
+                  <div>
+                    <div class="title-wrapper">
+                      <h3 class="title-3">
+                        <a class="card-title">Pourover</a>
+                      </h3>
+
+                      <span class="span title-2">Rs. 200</span>
+                    </div>
+
+                    <p class="card-text label-1">
+                      crafted cup of coffee made by slowly pouring hot water
+                      over freshly ground coffee beans
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="menu-card hover:card">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 100; --height: 100"
+                  >
+                    <img
+                      src=" ./assest/img/image copy 7.png"
+                      width="100"
+                      height="100"
+                      loading="lazy"
+                      alt="Olivas Rellenas"
+                      class="img-cover"
+                    />
+                  </figure>
+
+                  <div>
+                    <div class="title-wrapper">
+                      <h3 class="title-3">
+                        <a class="card-title">Ice Americano</a>
+                      </h3>
+
+                      <span class="span title-2">Rs. 150</span>
+                    </div>
+
+                    <p class="card-text label-1">
+                      blend of rich espresso and cold water, served over ice for
+                      a bold and invigorating coffee experience
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="menu-card hover:card">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 100; --height: 100"
+                  >
+                    <img
+                      src=" ./assest/img/image copy 8.png"
+                      width="100"
+                      height="100"
+                      loading="lazy"
+                      alt="Olivas Rellenas"
+                      class="img-cover"
+                    />
+                  </figure>
+
+                  <div>
+                    <div class="title-wrapper">
+                      <h3 class="title-3">
+                        <a class="card-title">Ice Latte</a>
+                      </h3>
+
+                      <span class="span title-2">Rs. 180</span>
+                    </div>
+
+                    <p class="card-text label-1">
+                      blend of rich espresso and chilled milk, served over ice
+                      for a smooth and creamy experience.
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="menu-card hover:card">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 100; --height: 100"
+                  >
+                    <img
+                      src="./assest/img/image copy 16.png"
+                      width="100"
+                      height="100"
+                      loading="lazy"
+                      alt="Opu Fish"
+                      class="img-cover"
+                    />
+                  </figure>
+
+                  <div>
+                    <div class="title-wrapper">
+                      <h3 class="title-3">
+                        <a class="card-title">Blended Mocha</a>
+                      </h3>
+
+                      <span class="span title-2">Rs. 200</span>
+                    </div>
+
+                    <p class="card-text label-1">
+                      creamy and chocolatey drink made with espresso, milk, and
+                      rich chocolate syrup, blended with ice for a smooth,
+                      frosty treat
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+            <h2 class="menu-items" id="menu-items-non">Non-coffee</h2>
+            <br />
+            <ul class="grid-list">
+              <li>
+                <div class="menu-card hover:card">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 100; --height: 100"
+                  >
+                    <img
+                      src="./assest/img/image copy 10.png"
+                      width="100"
+                      height="100"
+                      loading="lazy"
+                      alt="Opu Fish"
+                      class="img-cover"
+                    />
+                  </figure>
+
+                  <div>
+                    <div class="title-wrapper">
+                      <h3 class="title-3">
+                        <a class="card-title">Lemon Ginger Honey</a>
+                      </h3>
+
+                      <span class="span title-2">Rs. 120</span>
+                    </div>
+
+                    <p class="card-text label-1">
+                      soothing blend of freshly squeezed lemon juice, organic
+                      honey, and grated ginger, steeped in hot water
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="menu-card hover:card">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 100; --height: 100"
+                  >
+                    <img
+                      src="./assest/img/image copy 11.png"
+                      width="100"
+                      height="100"
+                      loading="lazy"
+                      alt="Greek Salad"
+                      class="img-cover"
+                    />
+                  </figure>
+
+                  <div>
+                    <div class="title-wrapper">
+                      <h3 class="title-3">
+                        <a class="card-title">Hot Chocolate</a>
+                      </h3>
+
+                      <span class="span title-2">Rs. 160</span>
+                    </div>
+
+                    <p class="card-text label-1">
+                      Rich and creamy hot chocolate made from premium cocoa,
+                      topped with whipped cream and a sprinkle of cocoa powder
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="menu-card hover:card">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 100; --height: 100"
+                  >
+                    <img
+                      src=" ./assest/img/image copy 12.png"
+                      width="100"
+                      height="100"
+                      loading="lazy"
+                      alt="Olivas Rellenas"
+                      class="img-cover"
+                    />
+                  </figure>
+
+                  <div>
+                    <div class="title-wrapper">
+                      <h3 class="title-3">
+                        <a class="card-title">Iced Lemonade</a>
+                      </h3>
+
+                      <span class="span title-2">Rs. 160</span>
+                    </div>
+
+                    <p class="card-text label-1">
+                      Blend of freshly squeezed lemons, sugar, and ice, topped
+                      with a sprig of mint
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="menu-card hover:card">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 100; --height: 100"
+                  >
+                    <img
+                      src="./assest/img/image copy 13.png"
+                      width="100"
+                      height="100"
+                      loading="lazy"
+                      alt="Lasagne"
+                      class="img-cover"
+                    />
+                  </figure>
+
+                  <div>
+                    <div class="title-wrapper">
+                      <h3 class="title-3">
+                        <a class="card-title">Iced Tea</a>
+                      </h3>
+
+                      <span class="span title-2">Rs. 180</span>
+                    </div>
+
+                    <p class="card-text label-1">
+                      Refreshing brewed tea served chilled, with your choice of
+                      sweetened or unsweetened
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="menu-card hover:card">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 100; --height: 100"
+                  >
+                    <img
+                      src=" ./assest/img/image copy 14.png"
+                      width="100"
+                      height="100"
+                      loading="lazy"
+                      alt="Olivas Rellenas"
+                      class="img-cover"
+                    />
+                  </figure>
+
+                  <div>
+                    <div class="title-wrapper">
+                      <h3 class="title-3">
+                        <a class="card-title">Smoothie</a>
+                      </h3>
+
+                      <span class="span title-2">RS. 180</span>
+                    </div>
+
+                    <p class="card-text label-1">
+                      healthy mix of spinach, banana, apple, and almond milk,
+                      packed with vitamins and nutrients
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="menu-card hover:card">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 100; --height: 100"
+                  >
+                    <img
+                      src="./assest/img/image copy 3.png"
+                      width="100"
+                      height="100"
+                      loading="lazy"
+                      alt="Opu Fish"
+                      class="img-cover"
+                    />
+                  </figure>
+
+                  <div>
+                    <div class="title-wrapper">
+                      <h3 class="title-3">
+                        <a class="card-title">Blue Lagoon</a>
+                      </h3>
+
+                      <span class="span title-2">Rs. 180</span>
+                    </div>
+
+                    <p class="card-text label-1">
+                      blend of blue curaçao, lemonade, and a splash of soda,
+                      served over ice and garnished with a slice of lemon and a
+                      cherry. Perfectly balanced with a tropical twist!
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="menu-card hover:card">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 100; --height: 100"
+                  >
+                    <img
+                      src="./assest/img/image copy 15.png"
+                      width="100"
+                      height="100"
+                      loading="lazy"
+                      alt="Lasagne"
+                      class="img-cover"
+                    />
+                  </figure>
+
+                  <div>
+                    <div class="title-wrapper">
+                      <h3 class="title-3">
+                        <a class="card-title">Cold Drinks</a>
+                      </h3>
+
+                      <span class="span title-2">Rs. 80</span>
+                    </div>
+
+                    <p class="card-text label-1">Coke, Sprite and Fanta</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+            <h2 class="menu-items" id="menu-items-food">Food</h2>
+            <br />
+            <ul class="grid-list">
+              <li>
+                <div class="menu-card hover:card">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 100; --height: 100"
+                  >
+                    <img
+                      src="./assest/img/image copy 2.png"
+                      width="100"
+                      height="100"
+                      loading="lazy"
+                      alt="Opu Fish"
+                      class="img-cover"
+                    />
+                  </figure>
+
+                  <div>
+                    <div class="title-wrapper">
+                      <h3 class="title-3">
+                        <a class="card-title">C.momo</a>
+                      </h3>
+
+                      <span class="span title-2">Rs. 140</span>
+                    </div>
+
+                    <p class="card-text label-1">
+                      Juicy ground chicken mixed with onions, garlic, and
+                      spices, wrapped in a soft dough and steamed to perfection.
+                      Served with a spicy dipping sauce.
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="menu-card hover:card">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 100; --height: 100"
+                  >
+                    <img
+                      src="./assest/img/image copy.png"
+                      width="100"
+                      height="100"
+                      loading="lazy"
+                      alt="Greek Salad"
+                      class="img-cover"
+                    />
+                  </figure>
+
+                  <div>
+                    <div class="title-wrapper">
+                      <h3 class="title-3">
+                        <a class="card-title">C. Kemma Noodles</a>
+                      </h3>
+
+                      <span class="span title-2">Rs. 150/200</span>
+                    </div>
+
+                    <p class="card-text label-1">
+                      Savory stir-fried noodles combined with spiced minced
+                      chicken, fresh vegetables, and aromatic herbs
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <%- include('footer') %>
+    <script>
+      document
+        .getElementById("coffee-items")
+        .addEventListener("click", function () {
+          document
+            .getElementById("menu-items-coffee")
+            .scrollIntoView({ behavior: "smooth" });
+        });
+
+      document
+        .getElementById("non-coffee-items")
+        .addEventListener("click", function () {
+          document
+            .getElementById("menu-items-non")
+            .scrollIntoView({ behavior: "smooth" });
+        });
+
+      document
+        .getElementById("food-items")
+        .addEventListener("click", function () {
+          document
+            .getElementById("menu-items-food")
+            .scrollIntoView({ behavior: "smooth" });
+        });
+    </script>
+    <script src="./style/main.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
